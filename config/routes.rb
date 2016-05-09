@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'teams/new'
+
+  get 'teams/edit'
+
+  get 'teams/create'
+
+  get 'teams/update'
+
+  get 'teams/show'
+
+  get 'teams/destroy'
+
+  get 'teams/index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 resources :teams
