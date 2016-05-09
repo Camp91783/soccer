@@ -1,2 +1,15 @@
 <h1>Teams#new</h1>
+
+<div class="container">
+	<h5>Teams new</h5>
+
+	<% if flash[:alert] %>
+	  <div class="flash alert">
+	    <p><%= flash[:alert] %></p>
+	  </div>
+	<% end %>
+
+	<%= render "form" %>
+</div>
+
 <p>Find me in app/views/teams/new.html.erb</p>

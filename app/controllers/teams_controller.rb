@@ -1,5 +1,6 @@
 class TeamsController < ApplicationController
   def new
+    @team = Team.new
   end
 
   def edit
@@ -18,5 +19,7 @@ class TeamsController < ApplicationController
   end
 
   def index
+
+
   end
 end
