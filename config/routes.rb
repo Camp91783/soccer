@@ -1,21 +1,6 @@
 Rails.application.routes.draw do
-  get 'teams/new'
-
-  get 'teams/edit'
-
-  get 'teams/create'
-
-  get 'teams/update'
-
-  get 'teams/show'
-
-  get 'teams/destroy'
-
-  get 'teams/index'
-
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-resources :teams
+  resources :teams
+end
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
@@ -68,4 +53,3 @@ resources :teams
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end

@@ -1,2 +1,30 @@
-<h1>Teams#show</h1>
-<p>Find me in app/views/teams/show.html.erb</p>
+<div class="container">
+		<div class="row">
+		<% if flash[:notice] %>
+		  <div class="flash notice col 12">
+		    <p><%= flash[:notice] %></p>
+		  </div>
+		<% end %>
+		</div>
+		<ul class="collection">
+			<li class="col sm4 collection-item avatar">
+			<span class="title">
+				<%= @team.name %>
+			</span>
+			<span class="secondary-content">
+				<%= link_to edit_team_path(@wolf) do %>
+			  	<i class="tiny material-icons orange-text text-lighten-2">edit_mode</i>
+				<% end %>
+				<%= link_to team_path(@team), method: :delete do %>
+			  	<i class="tiny material-icons orange-text text-lighten-2">delete</i>
+				<% end %>
+			</span>
+			<p><%= @team %></p>
+			</li>
+		</ul>
+		<div class="row">
+			<%= link_to :teams do %>
+				<i class="waves-effect right waves-light newPackBtn btn  red darken-3">Return Home</i>
+			<% end %>
+		</div>
+	</div>

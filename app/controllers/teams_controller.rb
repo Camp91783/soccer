@@ -26,7 +26,7 @@ class TeamsController < ApplicationController
   def update
     @team = Team.find(params[:id])
     if @team.update_attributes(team_params)
-      redirect_to team_path(@wolf), notice: "Successfully Updated!!!!"
+      redirect_to team_path(@team), notice: "Successfully Updated!!!!"
     else
       flash.now[:alert]="Couldn't update."
       render :edit
@@ -37,11 +37,11 @@ class TeamsController < ApplicationController
     @team = Team.find(params[:id])
   end
 
- def destroy
+  def destroy
     @team = Team.find(params[:id])
     @team.destroy
     redirect_to :teams, notice: "Successfully deleted!!!"
   end
-
+end
   
 end

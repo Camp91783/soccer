@@ -1,7 +1,17 @@
-<h1>Teams#new</h1>
+<h1>Create New Team</h1>
 
 <div class="container">
-	<h5>Teams new</h5>
+	<form action="/teams/new" method="post">
+  <div> 
+    Team Name?
+    <input type="text" name="name" >
+  </div>
+  <div>
+
+    <input type= "submit" value="Join the League">
+
+
+
 
 	<% if flash[:alert] %>
 	  <div class="flash alert">
@@ -9,7 +19,5 @@
 	  </div>
 	<% end %>
 
-	<%= render "form" %>
 </div>
 
-<p>Find me in app/views/teams/new.html.erb</p>
