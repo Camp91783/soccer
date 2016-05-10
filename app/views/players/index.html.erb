@@ -1,0 +1,24 @@
+<h1>Players index</h1>
+
+<div>
+			<h5>You have <%= Player.count %> players on your team</h5>
+</div>
+
+<div>
+	<% if flash[:notice] %>
+	  <div class="flash notice row">
+	    <p><%= flash[:notice] %></p>
+	  </div>
+	<% end %>
+</div>
+
+<div class="container">
+
+  <% if @players.any? %>
+    <% @players.each do |p| %>
+      <p>Name: <%= link_to p.name, player_path(p) %>  <br>Email:  <%= p.email %></p>
+    <% end %>
+  <% end %>
+</div>
+
+<p><%= link_to "All Players", :players %></p>

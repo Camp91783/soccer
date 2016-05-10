@@ -1,0 +1,33 @@
+<%= form_for @player do |p| %>
+
+<div>
+<% if p.object.errors.any?%>
+    <% p.object.errors.full_messages.each do |x|%>
+      <li>Error: <%= x %></li>
+    <% end %>
+      <li>Player info was not saved</li>
+  <% end %>
+  </div>
+
+  <div>
+    <div>
+      <%= p.label :name %>
+    </div>
+    <div>
+      <%= p.text_field :name %>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <%= p.label :email %>
+    </div>
+    <div>
+      <%= p.text_field :email %>
+    </div>
+  </div>
+
+  <div>
+      <%= p.submit %>
+  </div>
+  <% end %>
