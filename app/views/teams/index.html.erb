@@ -1,32 +1,15 @@
-<div class="container">
-	<div class="row">
-		<div class="col s10 offset-s1 center-align">
-			<h5>You have <%= Team.count %> Teams in your league</h5>
-		</div>
-	</div>
-	<!-- FORMAT THIS -->
-	<% if flash[:notice] %>
-	  <div class="flash notice row">
-	    <p><%= flash[:notice] %></p>
-	  </div>
-	<% end %>
-</div>
+<body>
+  <div class= "container">
+      <a href="/teams">List of Teams</a><br>
+      <a> Teams in League <a>
 
-<div class="container">
-	<ul class="collection">
-	<% if @teams.any? %>
-			<% @teams.each do |t| %>
-			<li class="collection-item avatar">
-	      <span class="title"><%= link_to t.name, team_path(w) %></span>
-			</li>
-	<% end %>
-		</ul>
-	<% else %>
-		<p>Sorry.  No wolves here!</p>
-	<% end %>
-	<div class="row">
-		<%= link_to new_team_path do %>
-			<i class="waves-effect right waves-light newPackBtn btn  red darken-3">New League Member</i>
-		<% end %>
-	</div>
-</div>
+    </div>
+  </div>
+<ul>
+  <% @teams.each do |t| %>
+
+    <li><a href="/teams/<%= t.id %>"><%= t.name %></a></li>
+  <% end %>
+</ul>
+<p><a href="/teams/new">Join a New team</a></p>
+<p><a href="/">Back Home</a></p>

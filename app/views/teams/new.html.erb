@@ -1,23 +1,16 @@
 <h1>Create New Team</h1>
 
-<div class="container">
-	<form action="/teams" method="post">
-  <div> 
-    Team Name?
-    <input type="text" name="name" >
-  </div>
-  <div>
+<%= form_for @team do |t| %>
+  <%= t.label :name %>:<br>
 
-    <input type= "submit" value="Join the League">
+  <%= t.text_field :name %>:
+
+  <%= t.submit %>
+<% end %>
 
 
 
 
-	<% if flash[:alert] %>
-	  <div class="flash alert">
-	    <p><%= flash[:alert] %></p>
-	  </div>
-	<% end %>
+	
 
-</div>
 
