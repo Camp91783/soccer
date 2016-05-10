@@ -1,0 +1,15 @@
+<body>
+  <div class= "container">
+      <a href="/teams">List of Teams</a><br>
+      <a> Teams in League <a>
+
+    </div>
+  </div>
+<ul>
+  <% @teams.each do |t| %>
+
+    <li><a href="/teams/<%= t.id %>"><%= t.name %></a></li>
+  <% end %>
+</ul>
+<p><a href="/teams/new">Join a New team</a></p>
+<p><a href="/">Back Home</a></p>

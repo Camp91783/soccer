@@ -1,0 +1,26 @@
+<%= form_for @team do |t| %>
+
+<div>
+<% if t.object.errors.any?%>
+    <% t.object.errors.full_messages.each do |x|%>
+      <li>Error: <%= x %></li>
+    <% end %>
+      <li>Team was not saved</li>
+  <% end %>
+  </div>
+
+  <div>
+    <div>
+      <%= t.label :name %>
+    </div>
+    <div>
+      <%= t.text_field :name %>
+    </div>
+  </div>
+
+  
+
+  <div>
+      <%= t.submit %>
+  </div>
+  <% end %>
