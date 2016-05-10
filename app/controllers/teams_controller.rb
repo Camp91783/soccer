@@ -6,12 +6,20 @@ class TeamsController < ApplicationController
   end
 
   def new
-    @team = Team.new
-  end
+  @team = Team.new(params[:name])
+  
+  end  
+
 
 
   def create
-    
+     @team = Team.new(team_params)
+    if @team.save
+      redirect_to :teams, notice: "Success"
+    else
+      flash.now[:alert] = "Couldn't save"
+      render :new
+    end
   end
 
   def show
@@ -30,13 +38,21 @@ class TeamsController < ApplicationController
 
   def edit
     @team = Team.find(params[:id])
+
   end
 
   def destroy
-    @team = Team.find(params[:id])
+    @team = Team.find(params[:name])
     @team.destroy
     redirect_to :teams, notice: "Successfully deleted!!!"
   end
+
+
+private
+ def team_params
+       params.require(:team).permit(:name)
+ end
+
 end
   
 
