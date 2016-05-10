@@ -18,7 +18,6 @@
 			<% @teams.each do |t| %>
 			<li class="collection-item avatar">
 	      <span class="title"><%= link_to t.name, team_path(w) %></span>
-	      <a href="#!" class="secondary-content numHowls">3 howls</a>
 			</li>
 	<% end %>
 		</ul>
@@ -26,8 +25,8 @@
 		<p>Sorry.  No wolves here!</p>
 	<% end %>
 	<div class="row">
-		<%= link_to new_wolf_path do %>
-			<i class="waves-effect right waves-light newPackBtn btn  red darken-3">New Pack Member</i>
+		<%= link_to new_team_path do %>
+			<i class="waves-effect right waves-light newPackBtn btn  red darken-3">New League Member</i>
 		<% end %>
 	</div>
 </div>

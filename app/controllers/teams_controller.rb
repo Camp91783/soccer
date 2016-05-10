@@ -1,7 +1,7 @@
 class TeamsController < ApplicationController
   
   def index
-    @teams=Teams.all 
+    @teams=Team.all 
 
   end
 
@@ -11,12 +11,7 @@ class TeamsController < ApplicationController
 
 
   def create
-      @team = Team.new(team_params)
-    if @team.save
-      redirect_to :Teams, notice: "Success"
-    else
-      flash.now[:alert] = "Couldn't save"
-      render :new
+    
   end
 
   def show
@@ -44,4 +39,4 @@ class TeamsController < ApplicationController
   end
 end
   
-end
+
