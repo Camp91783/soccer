@@ -3,17 +3,19 @@
 
 <h1><%= @team.name %></h1>
 
-form action="/players" method="options">
+<form action="/players" method="options">
   <div> 
     add player?
       <select name="player_id"> 
-      <% @players do |p| %>
+      <% @player.all do |p| %>
         <option value="<%= p.id %>"><%= p.name %></option>
       <% end %>
-      <% end %>
+
 
 
 
 
 <p><%= link_to "Edit Team", edit_team_path(@team) %></p>
 <p><%= link_to "All Teams", :teams %></p>
+
+
