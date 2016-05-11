@@ -1,12 +1,16 @@
-<h1>Teams show</h1>
+<h5>This is the <%= @team.name %> Team</h5>
+
 
 <h1><%= @team.name %></h1>
 
-<% if flash[:notice] %>
-  <div class="flash notice">
-    <p><%= flash[:notice] %></p>
-  </div>
-<% end %>
+form action="/players" method="options">
+  <div> 
+    add player?
+      <select name="player_id"> 
+      <% @players do |p| %>
+        <option value="<%= p.id %>"><%= p.name %></option>
+      <% end %>
+      <% end %>
 
 
 
