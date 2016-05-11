@@ -25,6 +25,7 @@ class TeamsController < ApplicationController
   def show
     @player = Player.all
     @team = Team.find(params[:id])
+    @players = Player.all
   end
 
   def update

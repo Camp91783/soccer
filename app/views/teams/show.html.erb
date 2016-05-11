@@ -1,15 +1,30 @@
+
 <h5>This is the <%= @team.name %> Team</h5>
 
 
 <h1><%= @team.name %></h1>
 
-<form action="/players" method="options">
-  <div> 
-    add player?
-      <select name="player_id"> 
-      <% @player.all do |p| %>
-        <option value="<%= p.id %>"><%= p.name %></option>
+
+
+
+
+  <div class="input-field col xs12 sr12 m12">
+<!-- add player to team -->
+    <select class="icons" id="player" name="player_id">
+      <option value="" disabled selected>Add player to Team</option>
+      <% @players.each do |p| %>
+        <option value="<%= p.id %>" 
+          <span class="left"><%= p.name %></span>
+        </option>
       <% end %>
+    </select>
+    <br>
+    <br>
+    <%= render "form" %>
+    <label></label>
+  </div><br><br>
+
+
 
 
 
@@ -18,4 +33,4 @@
 <p><%= link_to "Edit Team", edit_team_path(@team) %></p>
 <p><%= link_to "All Teams", :teams %></p>
 
-
+ 
