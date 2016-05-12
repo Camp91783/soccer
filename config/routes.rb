@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
+  get 'users/show'
+
+  get 'users/index'
+
   resources :league
   resources :players
   resources :teams
