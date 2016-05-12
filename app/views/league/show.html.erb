@@ -1,0 +1,33 @@
+<h5>This is the <%= @league.name %> League</h5>
+
+
+<h1><%= @league.name %></h1>
+
+
+
+
+
+  <div class="input-field col xs12 sr12 m12">
+<!-- add player to team -->
+    <select class="icons" id="league" name="league_id">
+      <option value="" disabled selected>Add Team to League</option>
+      <% @teams.each do |t| %>
+        <option value="<%= t.id %>" 
+          <span class="left"><%= t.name %></span>
+        </option>
+      <% end %>
+    </select>
+    <br>
+    <br>
+    <%= render "form" %>
+    <label></label>
+  </div><br><br>
+
+
+
+
+
+
+
+<p><%= link_to "Edit Team", edit_team_path(@team) %></p>
+<p><%= link_to "All Teams", :teams %></p>

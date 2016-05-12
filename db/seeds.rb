@@ -8,3 +8,18 @@
 
 Team.create!(name: "wolves")
 Team.create!(name: "chickens")
+Team.create!(name: "Warriors")
+Team.create!(name: "Bulls")
+Team.create!(name: "Huskers")
+Team.create!(name: "Arsenal")
+
+
+
+Player.create!(name: "Pete", email: "Pete@Pete.com")
+Player.create!(name: "Patrick", email: "Patrick@Patrick.com")
+Player.create!(name: "Andrew", email: "Andrew@Andrew.com")
+Player.create!(name: "Karly", email: "Karly@Karly.com")
+Player.create!(name: "Anne", email: "Anne@Anne.com")
+Player.create!(name: "Mick", email: "Mick@Mick.com")
+Player.create!(name: "Dave", email: "Dave@Dave.com")
+
