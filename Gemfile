@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+
+#use sorcery for authorization
+
 gem 'sorcery'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
