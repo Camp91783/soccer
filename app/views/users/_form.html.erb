@@ -1,0 +1,44 @@
+<%= form_for @users do |t| %>
+
+<div>
+<% if t.object.errors.any?%>
+    <% t.object.errors.full_messages.each do |x|%>
+      <li>Error: <%= x %></li>
+    <% end %>
+      <li>User</li>
+  <% end %>
+  </div>
+
+  <div>
+    <div>
+      <%= t.label :email %>
+    </div>
+    <div>
+      <%= t.text_field :email %>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <%= t.label :password %>
+    </div>
+    <div>
+      <%= t.text_field :password %>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <%= t.label :password_confirmation %>
+    </div>
+    <div>
+      <%= p.text_field :password_confirmation %>
+    </div>
+  </div>
+
+  
+
+  <div>
+      <%= t.submit %>
+  </div>
+  <% end %>

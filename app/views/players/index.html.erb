@@ -1,7 +1,7 @@
 <h1>Players index</h1>
 
 <div>
-			<h5>You have <%= Player.count %> players on your team</h5>
+			<h5>There are <%= Player.count %> Players In the Lincoln, Nebraska Soccer League</h5>
 </div>
 
 <div>
@@ -16,7 +16,7 @@
 
   <% if @players.any? %>
     <% @players.each do |p| %>
-      <p>Name: <%= link_to p.name, player_path(p) %>  <br>Email:  <%= p.email %></p>
+      <p>Name: <%= link_to p.name, player_path(p) %>  <br><b>Email:  <%= p.email %></b>
     <% end %>
   <% end %>
 </div>
