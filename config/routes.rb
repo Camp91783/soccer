@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  root "users#index"
+  root "league#edit"
 
   resources :users, except: [:destroy, :edit, :update]
   resources :sessions, only: [:new, :create, :destroy]
