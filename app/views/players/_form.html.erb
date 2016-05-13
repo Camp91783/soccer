@@ -1,8 +1,8 @@
-<%= form_for @player do |p| %>
+<%= form_for @player do |f| %>
 
 <div>
-<% if p.object.errors.any?%>
-    <% p.object.errors.full_messages.each do |x|%>
+<% if f.object.errors.any?%>
+    <% f.object.errors.full_messages.each do |x|%>
       <li>Error: <%= x %></li>
     <% end %>
       <li>Player info was not saved</li>
@@ -11,23 +11,36 @@
 
   <div>
     <div>
-      <%= p.label :name %>
+      <%= f.label :name %>
     </div>
     <div>
-      <%= p.text_field :name %>
+      <%= f.text_field :name %>
     </div>
   </div>
 
   <div>
-    <div>
-      <%= p.label :email %>
-    </div>
-    <div>
-      <%= p.text_field :email %>
-    </div>
+    <br>
+    <%= f.label :team %>
+      <div class="input-field">
+        <%= f.select(:teams_id) do %>
+          <% teams_array = Team.all.map { |team| [team.name, team.id] } %>
+          <%= options_for_select(teams_array) %>
+        <% end %>
+      </div>
   </div>
 
   <div>
-      <%= p.submit %>
+    <br>
+      <div>
+        <%= f.label :email %>
+      </div>
+      <div>
+        <%= f.text_field :email %>
+      </div>
+  </div>
+
+  <div>
+    <br>
+      <%= f.submit %>
   </div>
   <% end %>
