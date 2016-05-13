@@ -15,6 +15,9 @@
       <% @players.each do |p| %>
         <option value="<%= p.id %>" 
           <span class="left"><%= p.name %></span>
+          <ul><% @players.each do |p| %><ul>
+          <% end %>
+
         </option>
       <% end %>
     </select>

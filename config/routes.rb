@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
 
   get '/login'  => "sessions#new", as: :login
-  get 'logout'  => "sessions#destroy", as: :logout
+  post '/login' => "sessions#create"
+  post 'logout'  => "sessions#destroy", as: :logout
 
 
   resources :league
