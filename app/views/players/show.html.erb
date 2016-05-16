@@ -1,15 +1,21 @@
-<h1>Players show</h1>
+<body>
+<h1></h1>
 
 <h1><%= @player.name %></h1>
-
+<br>
+<br>
 <% if flash[:notice] %>
   <div class="flash notice">
     <p><%= flash[:notice] %></p>
   </div>
 <% end %>
 
+<div>
+<p>Team:  <%= @player.team.name if @player.team %></p>
+<p>Email: <%= @player.email %></p>
+</div>
 
-<p>Team: <%= @player.email %></p>
+
 
 
 <p><%= link_to "Edit Player", edit_player_path(@player) %></p>
@@ -17,3 +23,6 @@
 <p><%= link_to "All Players", :players %></p>
 <br>
 <p><a href="/league">Back Home</a></p>
+<body/>
+
+

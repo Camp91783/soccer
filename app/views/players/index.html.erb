@@ -1,8 +1,9 @@
-<h1>Players index</h1>
 
-<div>
-			<h5>There are <%= Player.count %> Players In the Lincoln, Nebraska Soccer League</h5>
-</div>
+
+<h1>League Player Index</h1>
+
+			<h3>There are <%= Player.count %> Players In the Lincoln, Nebraska Soccer League</h3>
+</div1>
 
 <div>
 	<% if flash[:notice] %>
@@ -13,12 +14,13 @@
 </div>
 
 <div class="container">
-
+<div class= "players-list"
   <% if @players.any? %>
     <% @players.each do |p| %>
       <p>Name: <%= link_to p.name, player_path(p) %>  <br><b>Email:  <%= p.email %></b>
     <% end %>
   <% end %>
+</div>
 </div>
 
 <br>
@@ -26,4 +28,5 @@
 <br>
 <p><%= link_to "All Teams", :teams%></p>
 <br>
+<div class= "button-link"
 <p><a href="/league">Back Home</a></p>

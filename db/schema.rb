@@ -44,4 +44,4 @@ ActiveRecord::Schema.define(version: 20160512184411) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
-  end
+end

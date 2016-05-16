@@ -1,7 +1,7 @@
 <h2> Teams Index <h2>
 
-<div>
-	<h5>You have <%= Team.count %> Teams in your League</h5>
+<div class = "team-title">
+	<h5>There are currently <%= Team.count %> Teams in the Lincoln Soccer League</h5>
 <div>
 
 
@@ -9,17 +9,16 @@
 
     </div>
   </div>
-<ul>
+<ol>
   <% @teams.each do |t| %>
 
     <li><a href="/teams/<%= t.id %>"><%= t.name %></a></li>
   <% end %>
-</ul>
+</ol>
 <br>
-<p><a href="/teams/new">Make a New team</a></p>
-<br>
+<ul>
+<p><a href="/teams/new">Register a New team</a></p>
 <p><a href="players/new">Register a New Player for the League</a></p>
-<br> 
 <p><a href="/players/"> List of All Players in League</a></p>
-<br>
 <p><a href="/league">Back Home</a></p>
+</ul>

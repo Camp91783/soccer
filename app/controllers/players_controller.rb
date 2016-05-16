@@ -41,8 +41,8 @@ class PlayersController < ApplicationController
     redirect_to :players, notice: "Successfully deleted!!!"
   end
 
-  private
-  def player_params
-        params.require(:player).permit(:name, :email)
-  end
+   private
+ def player_params
+       params.require(:player).permit(:name, :team_id, :email)
+ end
 end
