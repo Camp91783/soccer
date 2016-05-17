@@ -20,9 +20,9 @@
 
   <div>
     <br>
-    <%= f.label :team %>
+    <%= f.label :team_id, "team name" %>
       <div class="input-field">
-        <%= f.select(:teams_id) do %>
+        <%= f.select(:team_id) do %>
           <% teams_array = Team.all.map { |team| [team.name, team.id] } %>
           <%= options_for_select(teams_array) %>
         <% end %>

@@ -1,22 +1,17 @@
 class TeamsController < ApplicationController
-  
   def index
-    @teams=Team.all 
+    @team = Team.all
     @players = Player.all
-
   end
 
   def new
-  @team = Team.new(params[:name])
-  
-  end  
-
-
+    @team = Team.new
+  end
 
   def create
-     @team = Team.new(team_params)
+    @team = Team.new(team_params)
     if @team.save
-      redirect_to :teams, notice: "Success"
+      redirect_to :teams, notice: "Success!"
     else
       flash.now[:alert] = "Couldn't save"
       render :new
@@ -24,7 +19,6 @@ class TeamsController < ApplicationController
   end
 
   def show
-    @player = Player.all
     @team = Team.find(params[:id])
     @players = Player.all
   end
@@ -41,7 +35,6 @@ class TeamsController < ApplicationController
 
   def edit
     @team = Team.find(params[:id])
-
   end
 
   def destroy
@@ -50,12 +43,8 @@ class TeamsController < ApplicationController
     redirect_to :teams, notice: "Successfully deleted!!!"
   end
 
-
-private
- def team_params
-       params.require(:team).permit(:name)
- end
-
+  private
+  def team_params
+        params.require(:team).permit(:name)
+  end
 end
-  
-

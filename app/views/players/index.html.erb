@@ -1,7 +1,7 @@
 
 
 <h1>League Player Index</h1>
-
+      <div class= "number-teams">
 			<h3>There are <%= Player.count %> Players In the Lincoln, Nebraska Soccer League</h3>
 </div1>
 
@@ -15,10 +15,14 @@
 
 <div class="container">
 <div class= "players-list"
-  <% if @players.any? %>
+   <% if @players.any? %>
     <% @players.each do |p| %>
-      <p>Name: <%= link_to p.name, player_path(p) %>  <br><b>Email:  <%= p.email %></b>
-    <% end %>
+    <li class="block">
+      <p>Name:  <%= link_to p.name, player_path(p) %></p>
+      <p>Team:  <%= p.team_name %></p>
+      <p>Email: <%= p.email %></p>
+      </li>
+  <% end %>
   <% end %>
 </div>
 </div>

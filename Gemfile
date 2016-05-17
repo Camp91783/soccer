@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 #use sorcery for authorization
 gem 'bourbon'
 gem 'sorcery'
+gem 'paperclip'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
