@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :reports
   root "league#edit"
 
   resources :users, except: [:destroy, :edit, :update]

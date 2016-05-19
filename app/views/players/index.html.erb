@@ -19,7 +19,7 @@
     <% @players.each do |p| %>
     <li class="block">
       <p>Name:  <%= link_to p.name, player_path(p) %></p>
-      <p>Team:  <%= p.team_name %></p>
+      <p>Team:  <%= p.team.name if p.team %></p>
       <p>Email: <%= p.email %></p>
       </li>
   <% end %>

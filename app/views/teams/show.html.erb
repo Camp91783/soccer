@@ -4,6 +4,8 @@
 
 <h1><%= @team.name %></h1>
 
+<h2>Players on this team <%= @players.name %> <h2>
+
 
 
 
@@ -11,7 +13,7 @@
   <div class="input-field col xs12 sr12 m12">
 <!-- add player to team -->
     <select class="icons" id="player" name="player_id">
-      <option value="" disabled selected>Add player to Team</option>
+      <option value="" disabled selected>Assign Player to this Team</option>
       <% @players.each do |p| %>
         <option value="<%= p.id %>" 
           <span class="left"><%= p.name %></span>
@@ -28,7 +30,7 @@
   </div><br><br>
 
 
-<p><%= link_to "Edit Team", edit_team_path(@team) %></p>
+<p><%= link_to "Edit Team Name", edit_team_path(@team) %></p>
 <br>
 <br>
 <br>
