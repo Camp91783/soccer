@@ -21,7 +21,7 @@ config.action_mailer.smtp_settings = {
   port:                 587,
   domain:               'localhost300',
   user_name:            'sccssoccerproject',
-  password:             'soccer',
+  password:             'soccersoccer',
   authentication:       'plain',
   enable_starttls_auto: true  }
 
