@@ -41,11 +41,14 @@ Player.create!(name: "Art", email: "Art@Art.com")
 Player.create!(name: "Lisa", email: "Lisa@Lisa.com")
 Player.create!(name: "Kyle", email: "Kyle@Kyle.com")
 Player.create!(name: "Shawn", email: "Shawn@Shawn.com")
-Player.create!(name: "Kyle", email: "Kyle@Kyle.com")
+Player.create!(name: "Ali", email: "Ali@Ali.com")
 Player.create!(name: "Davida", email: "Davida@Davida.com")
 Player.create!(name: "Karly", email: "Karly@Karly.com")
 Player.create!(name: "Reed", email: "Reed@Reed.com")
 Player.create!(name: "Alex", email: "Alex@Alex.com")
 Player.create!(name: "Kate", email: "Kate@Kate.com")
+Player.create!(name: "Shannon", email: "Shannon@Shannon.com")
+Player.create!(name: "Sophie", email: "Sophie@Sophie.com")
+
 
 
