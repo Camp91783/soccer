@@ -1,6 +1,12 @@
 <h1>Create New Team</h1>
+<style>
+a {
+    color: #ECFD30;
 
-<%= form_for @team do |t| %>
+}
+</style>
+
+<a><%= form_for @team do |t| %></a>
   <%= t.label :name %>:<br>
 
   <%= t.text_field :name %>:

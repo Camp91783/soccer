@@ -1,4 +1,9 @@
+<style>
+a {
+    color: #ECFD30;
 
+}
+</style>
 
 <h1>League Player Index</h1>
       <div class= "number-teams">
@@ -18,7 +23,7 @@
    <% if @players.any? %>
     <% @players.each do |p| %>
     <li class="block">
-      <p>Name:  <%= link_to p.name, player_path(p) %></p>
+      <p><a>Name:  <%= link_to p.name, player_path(p) %></a></p>
       <p>Team:  <%= p.team.name if p.team %></p>
       <p>Email: <%= p.email %></p>
       </li>
