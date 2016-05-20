@@ -15,7 +15,7 @@ class LeagueController < ApplicationController
   def create
      @league = League.new(league_params)
     if @league.save
-      redirect_to :leagues, notice: "Success"
+      redirect_to :league, notice: "Success"
     else
       flash.now[:alert] = "Couldn't save"
       render :new
@@ -46,7 +46,7 @@ class LeagueController < ApplicationController
   def destroy
     @team = League.find(params[:name])
     @team.destroy
-    redirect_to :leagues, notice: "Successfully deleted!!!"
+    redirect_to :league, notice: "Successfully deleted!!!"
   end
 
 
