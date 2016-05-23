@@ -29,12 +29,11 @@ a:link, a:visited {
 
     </div>
   </div>
-<ol>
+<ul>
   <% @team.each do |t| %>
-
-    <li><a href="/teams/<%= t.id %>"><%= t.name %></a></li>
+    <li><a class="button" href="/teams/<%= t.id %>"><%= t.name %></a></li>
   <% end %>
-</ol>
+</ul>
 <br>
 <ul>
 <p><a href="/teams/new">Register a New team</a></p>

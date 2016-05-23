@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 body {
   background-color: #990000;
   background-image: -webkit-linear-gradient(gainsboro, #357400);
@@ -28,24 +29,41 @@ body {
   text-align: center;
   
 }
-ul#menu {
-    padding: 0;
+
+
+.button {
+  display: inline-table;
+  background: #d9d934;
+  background-image: -webkit-linear-gradient(top, #d9d934, #429127);
+  background-image: -moz-linear-gradient(top, #d9d934, #429127);
+  background-image: -ms-linear-gradient(top, #d9d934, #429127);
+  background-image: -o-linear-gradient(top, #d9d934, #429127);
+  background-image: linear-gradient(to bottom, #d9d934, #429127);
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  text-shadow: 1px 1px 3px #666666;
+  -webkit-box-shadow: 10px 3px 25px #666666;
+  -moz-box-shadow: 10px 3px 25px #666666;
+  box-shadow: 10px 3px 25px #666666;
+  font-family: Georgia;
+  color: #021403;
+  font-size: 20px;
+  padding: 8px 20px 10px 20px;
+  border: solid #176e1d 3px;
+  text-decoration: none;
+  margin: 20px;
 }
 
-ul#menu li {
-    display: inline;
-}
+.btn:hover {
+  background: #52942c;
+  text-decoration: none;
+} 
 
-ul#menu li a {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 4px 4px 0 0;
-}
-
-ul#menu li a:hover {
-    background-color: orange;
+.button :hover {
+     background: black;
+     color: black;
+     text-decoration: none;  
 }
 
 
