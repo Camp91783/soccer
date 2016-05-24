@@ -32,7 +32,7 @@ body {
 
 
 .button {
-  display: inline-table;
+  display: inline;
   background: #d9d934;
   background-image: -webkit-linear-gradient(top, #d9d934, #429127);
   background-image: -moz-linear-gradient(top, #d9d934, #429127);
@@ -42,10 +42,8 @@ body {
   -webkit-border-radius: 6;
   -moz-border-radius: 6;
   border-radius: 6px;
-  text-shadow: 1px 1px 3px #666666;
   -webkit-box-shadow: 10px 3px 25px #666666;
   -moz-box-shadow: 10px 3px 25px #666666;
-  box-shadow: 10px 3px 25px #666666;
   font-family: Georgia;
   color: #021403;
   font-size: 20px;

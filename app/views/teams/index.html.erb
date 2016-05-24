@@ -1,8 +1,7 @@
-<h1><center> Current League Members </center><h1>
-<style>
+<h1><center> League Members </center><h1>
 <style>
 h1 {text-align:center;}
-.list {text-align:left;
+.list {text-align:center;
 				color: black;}
 a {
     color: #ECFD30;
@@ -14,32 +13,25 @@ a:link, a:visited {
     text-decoration: none;
     display: inline-block;
 }
+
+.bottom-menu  {
+      display: inline-block;
+
+}
 </style>
-</style>
-
-
-
-
 <div class = "team-title">
-	<h5>There are currently <%= Team.count %> Teams in the Lincoln Soccer League</h5>
+	<h5>Current Team Count:   <%= Team.count %></h5>
 <div>
-
-
-
-
     </div>
   </div>
 <ul>
   <% @team.each do |t| %>
-    <li><a class="button" href="/teams/<%= t.id %>"><%= t.name %></a></li>
+    <inline-block<li><a class="button" href="/teams/<%= t.id %>"><%= t.name %></a></li></inline-block<li>
   <% end %>
-</ul>
-<br>
-<ul>
 <p><a href="/teams/new">Register a New team</a></p>
 <p><a href="players/new">Register a New Player for the League</a></p>
 <p><a href="/players/"> List of All Players in League</a></p>
 <p><a href="/league">Back Home</a></p>
 <p><a href="/reports">Contact Us?</a></p>
+</div>
 
-</ul>
